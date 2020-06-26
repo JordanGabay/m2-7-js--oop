@@ -9,3 +9,23 @@
 // and confirm that you have everything in there.
 
 // By the way, Boots is a Simaese cat...
+
+
+//Create the function from exercise 1.1 but add the breed and name.
+class Cat {
+    constructor(name, breed) {
+      this.species = 'cat';
+      this.tiredness = 0;
+      this.hunger = 0;
+      this.loneliness = 0;
+      this.happiness = 0;
+      this.breed = breed;
+      this.name = name;
+    }
+  }
+
+//Update const boots to include the name and breed of the cat. 
+  const boots = new Cat ('Boots', 'Siamese');
+
+//console.log boots again.
+  console.log(boots);

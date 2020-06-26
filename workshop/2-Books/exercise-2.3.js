@@ -2,6 +2,69 @@
 // Copy over your solutions classes you created in 2.1 and 2.2.
 // Paste them right here:
 
+// Exercise 2.1
+
+class Book {
+  constructor(title, genre, author, isRead) {
+      this.title = title;
+      this.genre = genre;
+      this.author = author;
+      this.isRead = isRead || false;
+  }
+}
+
+// const book1 = new Book('The alchemist', 'Fiction', 'Paulo Coelho', true);
+// const book2 = new Book('Star Wars', 'Fiction', 'Fantasy');
+// const book3 = new Book('The Shining', 'Horror', 'Stephen King', true);
+// const book4 = new Book('The Hobbit', 'Alice in Wonderland', 'Lord of the Rings');
+// const book5 = new Book('And Then There Were None', 'Dream of the Red Chamber', 'The Da Vinci Code');
+
+// console.log(book1, book2, book3, book4, book5);
+
+// Exercise 2.2
+
+class BookList {
+  constructor() {
+    this.books = [];
+    this.lastRead = null;
+    this.currentlyReading = null;
+  }
+
+
+// const library = new BookList();
+
+// console.log(library);
+
+//Code for Exercise 2.3 here.
+
+add = (book) => {
+  this.books.push(book);
+  }
+
+
+getNumUnread = () => {
+  let numUnread = 0;
+  this.books.forEach((book) => {
+    if (book.isRead === false) {
+      numUnread++;
+    }
+  });
+
+  return numUnread;
+};
+
+getNumRead = () => {
+  let numRead = 0;
+  this.books.forEach((book) => {
+    if (book.isRead === true){
+      numRead++;
+    }
+  })
+
+  return numRead;
+  }
+}
+
 // Exercise 2.3
 //
 // We want to be able to add books to our BookList, so that we can start a
